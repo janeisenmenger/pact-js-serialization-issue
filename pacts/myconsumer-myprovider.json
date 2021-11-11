@@ -1,0 +1,40 @@
+{
+  "consumer": {
+    "name": "MyConsumer"
+  },
+  "provider": {
+    "name": "MyProvider"
+  },
+  "messages": [
+    {
+      "description": "a message",
+      "providerStates": [
+
+      ],
+      "contents": {
+        "payload": "my-payload"
+      },
+      "matchingRules": {
+      },
+      "metaData": {
+        "content-type": "application/json",
+        "kafka_topic": {
+          "json_class": "Pact::Term",
+          "data": {
+            "generate": "project-production-stage-topic",
+            "matcher": {
+              "json_class": "Regexp",
+              "o": 0,
+              "s": "project-(production|validation)-stage-topic"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  }
+}
